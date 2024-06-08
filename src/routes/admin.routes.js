@@ -13,6 +13,9 @@ const {
   editProduct,
   deleteProduct,
   removeProduct,
+  listUsers,
+  listCategories,
+  listOrders,
 } = require("../controllers/admin");
 
 // /admin
@@ -34,8 +37,7 @@ router.post(
 
 //*** EDIT PRODUCT ***/
 router.get("/editar-producto/:id", updateProduct);
-router.put("/editar-producto/:id",
-  
+router.put("/editar-producto/:id",  
   uploadProducts.fields([
     { name: "firstImg" },
     { name: "secondImg" },
@@ -47,6 +49,13 @@ router.put("/editar-producto/:id",
 //*** DELETE PRODUCT */
 router.get("/eliminar-producto", deleteProduct);
 router.delete("/eliminar-producto/:id", removeProduct);
-//router.delete('/eliminar-producto/:id', destroy);
+
+//*** LIST ALL USUARIOS ***/
+router.get("/usuarios",listUsers)
+//*** LIST ALL CATEGORIES ***/
+router.get("/categorias",listCategories)
+//*** LIST ALL ORDERS ***/
+router.get("/ordenes",listOrders)
+
 
 module.exports = router;

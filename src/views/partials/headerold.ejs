@@ -1,0 +1,63 @@
+<header class="header">
+  <a href="/">
+    <figure class="pandaHeader"><img src="/images/logo/panda-logo.png" alt="Simplemente Juguetes"></figure>
+  </a>
+  <h1>
+    <p class="tituloNegro">SIMPLEMENTE</p>
+    <p class="tituloBlanco">JUGUETES</p>
+  </h1>
+  <div class="selectoresHeader">
+    
+      <a href="/productos/lista-productos">JUEGOS Y JUGUETES</a> |
+      
+      <a href="">EDADES</a> |
+    
+      <a href="">PERSONAJES</a>
+  </div>
+  <!--busqueda-->
+  <div> <!--class="busquedaHeader"-->
+    <form action="/buscar" method="GET"> <!--  class="search-form" -->
+      <input type="text" name="keywords" placeholder="Buscar..." class="search-form_input">
+      <!-- <figure><i class="fa-solid fa-magnifying-glass"></i></figure> -->
+      <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+  <!--/busqueda-->
+
+  <!--iconos del header-->
+  <div class="iconosHeader">
+
+    <!--autenticacion favoritos-->
+    <% if(!locals.userLogin){ %>  
+      <a href="/autenticacion/login"><i class="fa-solid fa-heart"></i>Favoritos</a>
+      <a href="/autenticacion/login"><i class="fa-solid fa-user"></i>Ingresar</a>
+      <a href="/autenticacion/login"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
+
+    <% } else if(locals.userLogin && locals.userLogin.role === 2){ %> 
+      <a href="/admin/crear-producto"><i class="fa-solid fa-cart-plus"></i>Agregar</a>
+      <a href="/admin/lista-productos"><i class="fa-solid fa-clipboard-list"></i>Productos</a>
+      <a href="/autenticacion/cerrar-session"><i class="fa-solid fa-user"></i>Cerrar Sesion</a>
+  
+    <% } else { %>
+      <a href="/favoritos"><i class="fa-solid fa-heart"></i>Favoritos</a> <!--fa-solid fa-heart-->
+      <a href="/perfil/<%= locals.userLogin.id %>"><i class="fa-solid fa-user-check"></i><%= locals.userLogin.userName.charAt(0).toUpperCase() + locals.userLogin.userName.slice(1) %></a>
+      <a href="/carrito-compra"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
+    <% } %>
+   
+  <!--ofertas y outlet-->
+  <div class="ofertasYOutlet">
+    <% if(!locals.userLogin){ %>  
+    <h3 class="ofertasHeader"><a href="/"><i class="fa-solid fa-fire-flame-curved"></i>OFERTAS</a></h3>
+    <h3 class="outletHeader"><a href="">OUTLET</a></h3>
+    <% } else if(locals.userLogin && locals.userLogin.id === 1){ %> 
+      <p class="administrator"><a href="">VISTA ADMINITRADOR</a></p>
+    <% } else { %>
+    <h3 class="ofertasHeader"><a href="/"><i class="fa-solid fa-fire-flame-curved"></i>OFERTAS</a></h3>
+    <h3 class="outletHeader"><a href="">OUTLET</a></h3>
+    <% } %>
+  </div>
+
+  
+  <figure class="barrasHeader"><i class="fa-solid fa-bars"></i></figure>
+
+</header>

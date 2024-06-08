@@ -53,7 +53,7 @@ main.mainRegistro-1 .form {
     gap: 8px;
     border-radius: 7px;
     padding: 4%;
-    background: var(--blanco);
+    background: var(--white);
     flex-direction: column;
 }
 

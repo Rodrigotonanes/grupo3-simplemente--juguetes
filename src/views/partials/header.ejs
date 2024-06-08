@@ -1,59 +1,92 @@
-<header class="header">
-  <a href="/">
-    <figure class="pandaHeader"><img src="/images/logo/panda-logo.png" alt="Simplemente Juguetes"></figure>
-  </a>
-  <h1>
-    <p class="tituloNegro">SIMPLEMENTE</p>
-    <p class="tituloBlanco">JUGUETES</p>
-  </h1>
-  <div class="selectoresHeader">
-    
-      <a href="/productos/lista-productos">JUEGOS Y JUGUETES</a> |
-      
-      <a href="">EDADES</a> |
-    
-      <a href="">PERSONAJES</a>
-  </div>
-  <!--busqueda-->
-  <div> <!--class="busquedaHeader"-->
-    <form action="/buscar" method="GET"> <!--  class="search-form" -->
-      <input type="text" name="keywords" placeholder="Buscar..." class="search-form_input">
-      <!-- <figure><i class="fa-solid fa-magnifying-glass"></i></figure> -->
-      <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-  <!--/busqueda-->
-  <!--iconos del header-->
-  <div class="iconosHeader">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-custome"> <!-- Aumentar la altura del navbar -->
+        <div class="container-fluid d-flex align-items-center"> <!-- Utilizar flexbox para centrar verticalmente -->
+            <a href="/">
+                <figure class="pandaHeader">
+                    <img class="img-height-custome" src="/images/logo/panda-logo.png" alt="Simplemente Juguetes">
+                </figure>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custome" href="/productos/lista-productos">JUEGOS Y JUGUETES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custome" href="#">EDADES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-custome" href="#">PERSONAJES</a>
+                    </li>
+                </ul>
+                <form class="d-flex" action="/buscar" method="GET">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Buscar ..." aria-label="Search"
+                            name="keywords">
+                        <button class="btn btn-outline-light btn-search-custome" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <!--autenticacion favoritos-->
+                    <% if(!locals.userLogin){ %>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/autenticacion/login"><i class="fa-solid fa-heart"></i>
+                                Favoritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/autenticacion/login"><i class="fa-solid fa-cart-shopping"></i>
+                                Carrito</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/autenticacion/login"><i
+                                    class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar
+                                Sesión</a>
+                        </li>
 
-    <!--autenticacion favoritos-->
-    <% if(!locals.userLogin){ %>  
-      <a href="/autenticacion/login"><i class="fa-solid fa-heart"></i>Favoritos</a>
-      <a href="/autenticacion/login"><i class="fa-solid fa-user"></i>Ingresar</a>
-      <a href="/autenticacion/login"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
-
-    <% } else if(locals.userLogin && locals.userLogin.role === 2){ %> 
-      <a href="/admin/crear-producto"><i class="fa-solid fa-cart-plus"></i>Agregar</a>
-      <a href="/admin/lista-productos"><i class="fa-solid fa-clipboard-list"></i>Productos</a>
-      <a href="/autenticacion/cerrar-session"><i class="fa-solid fa-user"></i>Cerrar Sesion</a>
-  
-    <% } else { %>
-      <a href="/favoritos"><i class="fa-solid fa-heart"></i>Favoritos</a> <!--fa-solid fa-heart-->
-      <a href="/perfil/<%= locals.userLogin.id %>"><i class="fa-solid fa-user-check"></i><%= locals.userLogin.userName.charAt(0).toUpperCase() + locals.userLogin.userName.slice(1) %></a>
-      <a href="/carrito-compra"><i class="fa-solid fa-cart-shopping"></i>Carrito</a>
-    <% } %>
-   
-  <!--ofertas y outlet-->
-  <div class="ofertasYOutlet">
-    <% if(!locals.userLogin){ %>  
-    <h3 class="ofertasHeader"><a href="/"><i class="fa-solid fa-fire-flame-curved"></i>OFERTAS</a></h3>
-    <h3 class="outletHeader"><a href="">OUTLET</a></h3>
-    <% } else if(locals.userLogin && locals.userLogin.id === 1){ %> 
-      <p class="administrator"><a href="">VISTA ADMINITRADOR</a></p>
-    <% } else { %>
-    <h3 class="ofertasHeader"><a href="/"><i class="fa-solid fa-fire-flame-curved"></i>OFERTAS</a></h3>
-    <h3 class="outletHeader"><a href="">OUTLET</a></h3>
-    <% } %>
-  </div>
-  <figure class="barrasHeader"><i class="fa-solid fa-bars"></i></figure>
+                        <% } else if(locals.userLogin && locals.userLogin.role===2){ %>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/crear-producto"><i
+                                        class="fa-solid fa-file-circle-plus"></i></i>
+                                    Agregar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/lista-productos"><i
+                                        class="fa-regular fa-rectangle-list"></i>
+                                    Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/autenticacion/cerrar-session"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión (<%=
+                                        locals.userLogin.userName %>)</a>
+                            </li>
+                            <% } else { %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/favoritos"><i class="fa-solid fa-heart"></i>
+                                        Favoritos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/carrito-compra"><i class="fa-solid fa-cart-shopping"></i>
+                                        Carrito</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/perfil/<%= locals.userLogin.id %>"><i
+                                            class="fa-solid fa-user "></i>
+                                        Perfil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/autenticacion/cerrar-session"><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión (<%=
+                                            locals.userLogin.userName.toLowerCase()%>)</a>
+                                </li>
+                                <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>

@@ -1,4 +1,4 @@
-const { check, body } = require("express-validator");
+const { check } = require("express-validator");
 const path = require("path");
 
 const regExpFiles = /.png|.jpg|.jpeg|.webp|.gif/i;
@@ -34,6 +34,7 @@ const fieldPrice = check('price')
   .bail()
   .isDecimal()
   .withMessage("El precio debe ser decimal <i class='fa-solid fa-triangle-exclamation'></i>");
+  
   const fieldSku = check('sku')
   .notEmpty()
   .withMessage('El sku es requerido <i class="fa-solid fa-triangle-exclamation"></i>')
@@ -44,14 +45,17 @@ const fieldPrice = check('price')
   .isInt({ min: 0 })
   .withMessage('El sku debe ser positivo <i class="fa-solid fa-triangle-exclamation"></i>')
   .bail()
+  
   const fieldCategory = check('categoryId')
   .notEmpty()
   .withMessage('La categoria debe estar especificada <i class="fa-solid fa-triangle-exclamation"></i>')
   .bail()
+  
   const fieldAvailable = check('available')
   .notEmpty()
   .withMessage('La disponibilidad debe estar especificada <i class="fa-solid fa-triangle-exclamation"></i>')
   .bail()
+  
   const fieldStock = check('stock')
   .notEmpty()
   .withMessage('El stock es requerido <i class="fa-solid fa-triangle-exclamation"></i>')
@@ -62,6 +66,7 @@ const fieldPrice = check('price')
   .isInt({ min: 0 })
   .withMessage('El stock debe ser positivo <i class="fa-solid fa-triangle-exclamation"></i>')
   .bail()
+  
   const defaultValidationFiels = [
     fieldName,fieldPrice,fieldSku,fieldCategory,fieldAvailable,fieldStock
   ];

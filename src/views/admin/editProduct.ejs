@@ -363,7 +363,8 @@
                                     <label for="firstImg" class="form-label">Selecciona la imagen
                                         principal del juguete<span class="required-custom">*</span></label>
                                     <input class="form-control" id="selectPicProduct" type="file" name="firstImg"
-                                        accept="image/*"><img src="/images/products/<%= product.firstImg %>" alt=""
+                                        accept="image/*">
+                                        <img src="/images/products/<%= product.firstImg %>" alt=""
                                         class="no_img" id="ProdPictureForm">
                                     <p class="text-danger col-12 err-img-principal">
                                         <%= locals.errors?.firstImg?.msg %>

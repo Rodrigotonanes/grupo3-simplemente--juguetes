@@ -13,17 +13,17 @@ body.body-edit-product{display: flex;margin: 0;padding: 0;box-sizing: border-box
     justify-content:start;
 }
 .form-edit{
- order: 3;
- align-self: center;
- padding: 10px;
- height: auto;
- display: flex;
- /* margin-left: 400px; */
- margin-bottom: 80px;
- border-radius: 5px;
- box-shadow: 3px 0px 20px 10px rgba(0,0,0,0.2);
- flex-direction: column;
- flex-wrap: wrap;
+ order: 3;
+ align-self: center;
+ padding: 10px;
+ height: auto;
+ display: flex;
+ /* margin-left: 400px; */
+ margin-bottom: 80px;
+ border-radius: 5px;
+ box-shadow: 3px 0px 20px 10px rgba(0,0,0,0.2);
+ flex-direction: column;
+ flex-wrap: wrap;
 }
 .a-volver-edit-product:hover{
     color: var(--blanco);

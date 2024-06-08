@@ -8,7 +8,7 @@ main.mainHome img {
 
 main.mainHome div.articulosHome article figure {
     margin: 0;
-    background: var(--blanco);
+    background: var(--white);
     height: 170px;
 }
 
@@ -17,7 +17,7 @@ main.mainHome .titulosHome {
     padding: 10px;
     text-align: center;
     font-size: 15px;
-    color: var(--blanco);
+    color: var(--white);
     background: var(--orange);
 }
 
@@ -34,7 +34,7 @@ main.mainHome div.diverHome img {}
 
 main.mainHome div.diverHome p {
     align-self: center;
-    color: var(--blanco);
+    color: var(--white);
 }
 
 main.mainHome div.titulosHome {
@@ -103,7 +103,7 @@ main.mainHome div.articulosHome {
 main.mainHome div.articulosHome h2 {
     text-align: center;
     font-size: 18px;
-    color: var(--blanco);
+    color: var(--white);
 }
 
 main.mainHome div.articulosHome article {
@@ -124,7 +124,7 @@ main.mainHome div.articulosHome article div {
 }
 
 main.mainHome div.articulosHome article div p {
-    color: var(--blanco);
+    color: var(--white);
 }
 
 main.mainHome div.articulosHome article div p.tituloProduc {}
@@ -143,7 +143,7 @@ main.mainHome div.articulosHome article div a {
     position: absolute;
     background: var(--green);
     text-decoration: none;
-    color: var(--blanco);
+    color: var(--white);
     padding: 10px;
 }
 main.mainHome div.titulosHome{
@@ -370,7 +370,7 @@ main.mainHome div.mapa-home iframe {
 /*  CORROSEL*/
 .subtitle-custom {
     font-size: 2.2rem !important;
-    color: var(--blanco);
+    color: var(--white);
 }
 
 .card {

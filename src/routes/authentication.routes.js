@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { uploadAuthentication } = require("../middlewares/uploadFiles");
+const {usersValidationStore,usersValidationUpdate} = require("../middlewares/validations")
 
 // ************ Controller Require ************
 const {
@@ -34,7 +35,7 @@ router.post("/error", errorAuth);
 
 //*** EDIT ONE USER ***/
 router.get("/editar-usuario/:id", edit);
-router.put("/editar-usuario/:id", uploadAuthentication.single("userPicture"),updateUserValidation, update);
+router.put("/editar-usuario/:id", uploadAuthentication.single("userPicture"),usersValidationUpdate, update);
 
 //*** DELETE ONE USER ***/
 //router.delete('/eliminar-usuario/:id', destroy);

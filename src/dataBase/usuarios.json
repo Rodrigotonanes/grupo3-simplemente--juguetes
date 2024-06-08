@@ -2,20 +2,20 @@
    {
       "id": 1,
       "userName": "root",
-      "name": "Adminitrador",
+      "name": "Simplemente Juguetes",
       "email": "admin@gmail.com",
       "password": "$2a$10$kH5DX91UdBSeJu8kV8kCjeTQya2IEMasloPzr9m.OwbDY9hOsSAsm",
-      "province": "BA",
+      "province": "CA",
       "locality": "Administrador",
-      "postal": 9999,
-      "street": "Administrador",
-      "streetNumber": 9999,
-      "floor": 1,
+      "postal": "C1000AAA",
+      "street": "Av. Corrientes",
+      "streetNumber": "9999",
+      "floor": "1",
       "betweenSt1": "Administrador",
       "betweenSt2": "Administrador",
-      "phoneNumber": 9999,
-      "indications": "Administrador",
-      "userPicture": "default.png",
+      "phoneNumber": "+5491112345678",
+      "indications": "Edificio 123",
+      "userPicture": "userPicture-1717814074944.png",
       "role": "admin"
    },
    {
@@ -56,5 +56,4 @@
       "userPicture": "default.png",
       "role": "user"
    }
-   
 ]
