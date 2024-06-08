@@ -51,11 +51,13 @@ router.get("/eliminar-producto", deleteProduct);
 router.delete("/eliminar-producto/:id", removeProduct);
 
 //*** LIST ALL USUARIOS ***/
-router.get("/usuarios",listUsers)
+router.get("/lista-usuarios",listUsers)
+
 //*** LIST ALL CATEGORIES ***/
-router.get("/categorias",listCategories)
+router.get("/lista-categorias",listCategories)
+
 //*** LIST ALL ORDERS ***/
-router.get("/ordenes",listOrders)
+router.get("/lista-ordenes",listOrders)
 
 
 module.exports = router;
