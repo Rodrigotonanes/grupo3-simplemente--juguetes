@@ -17,7 +17,7 @@ const {
   logout,
 } = require("../controllers/authentication");
 
-const { updateUserValidation } = require("../middlewares/validations");
+//const { updateUserValidation } = require("../middlewares/validations");
 const { userValidation } = require("../middlewares/validations");
 const { uploadUserPicture } = require("../middlewares/uploadUserPicture");
 
@@ -25,10 +25,12 @@ const { uploadUserPicture } = require("../middlewares/uploadUserPicture");
 //*** CREATE ONE USER ***/
 //router.get("/crear-usuario/", add);
 
-// /autenticacion
+// /autenticacion/registrar
 router.get("/registro", registro);
 router.post("/registro",uploadUserPicture.fields([{ name: "userPicture", maxCount: 1 }]),userValidation , registro1);
 router.get("/registro-completado", registro2);   
+
+// /autenticacion/login
 router.get("/login", login);
 router.post("/login", loginProcess);
 router.post("/error", errorAuth);
@@ -40,6 +42,6 @@ router.put("/editar-usuario/:id", uploadAuthentication.single("userPicture"),use
 //*** DELETE ONE USER ***/
 //router.delete('/eliminar-usuario/:id', destroy);
 
-router.get("/cerrar-session", logout);
+router.get("/cerrar-sesion", logout);
 
 module.exports = router;

@@ -8,10 +8,10 @@ const logger = require("morgan");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
 
-const checkSession = require("./middlewares/validations/checkSession");
+const checkSession = require("./middlewares/checkSession");
 //const checkCookie = require("./middlewares/checkCookie");
 const dataLocal = require("./middlewares/validations/dataLocal");
-const saveSession = require("./middlewares/validations/saveSession");
+const saveSession = require("./middlewares/saveSession");
 const userId = require("./middlewares/validations/userId");
 
 // ************ express() - (don't touch) ************
@@ -25,10 +25,14 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-app.use(
-  session({ secret: "Secreto", resave: false, saveUninitialized: false })
-); //CRPG
+app.use(session({ secret: "Secreto", resave: false, saveUninitialized: false })); //CRPG
+//app.use(checkCookie);
+app.use(saveSession);
+app.use(checkSession);
 
+app.use(dataLocal);
+
+app.use(userId);
 
 // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");
@@ -45,12 +49,16 @@ app.set("views", [
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 
+/*** RUTAS ***/
+const authRouter = require("./routes/authentication.routes"); // Rutas autentication
+const cartRouter = require("./routes/cart.routes");
 const otherRouter = require("./routes/other.routes"); // Rutas main
 const adminRouter = require("./routes/admin.routes"); // Rutas admin
-const authRouter = require("./routes/authentication.routes"); // Rutas autentication
 const prodRouter = require("./routes/products.routes"); // Rutas products
-const cartRouter = require("./routes/cart.routes");
 const userRouter = require("./routes/users.routes");
+
+/*** MIDDLEWARE ***/
+
 const { check } = require("express-validator");
 
 const apiOtherRoutes = require("./routes/api/other.api");
@@ -62,10 +70,7 @@ const apiAdminRoutes = require("./routes/api/admin.api");
 const apiUserRoutes = require("./routes/api/users.api");
 
 
-app.use(checkSession);
-app.use(dataLocal);
-app.use(saveSession);
-app.use(userId);
+
 
 /* ENRUTADORES */
 // Los que se visualizan en el navegador van en español

@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const userController = require("../controllers/users");
+const { favorite, profile } = require("../controllers/users");
 
-router.get("/favoritos", userController.favorite);
-router.get("/perfil/:id", userController.profile);
+router.get("/favoritos", favorite);
+router.get("/perfil/:id", profile);
 
 module.exports = router;

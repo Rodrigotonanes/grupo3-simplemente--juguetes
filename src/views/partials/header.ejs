@@ -36,6 +36,10 @@
                     <!--autenticacion favoritos-->
                     <% if(!locals.userLogin){ %>
                         <li class="nav-item">
+                            <a class="nav-link" href="/sobre-nostros"><i class="fa-solid fa-circle-info"></i>
+                                Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/autenticacion/login"><i class="fa-solid fa-heart"></i>
                                 Favoritos</a>
                         </li>
@@ -61,11 +65,15 @@
                                     Productos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/autenticacion/cerrar-session"><i
+                                <a class="nav-link" href="/autenticacion/cerrar-sesion"><i
                                         class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión (<%=
                                         locals.userLogin.userName %>)</a>
                             </li>
                             <% } else { %>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/sobre-nostros"><i class="fa-solid fa-circle-info"></i>
+                                        Sobre nosotros</a>
+                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/favoritos"><i class="fa-solid fa-heart"></i>
                                         Favoritos</a>
@@ -80,7 +88,7 @@
                                         Perfil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/autenticacion/cerrar-session"><i
+                                    <a class="nav-link" href="/autenticacion/cerrar-sesion"><i
                                             class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión (<%=
                                             locals.userLogin.userName.toLowerCase()%>)</a>
                                 </li>
