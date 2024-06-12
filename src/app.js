@@ -7,12 +7,16 @@ const logger = require("morgan");
 //const partials = require("express-partials");
 const methodOverride = require("method-override"); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
+const jwt = require("jsonwebtoken");
 
 const checkSession = require("./middlewares/checkSession");
-//const checkCookie = require("./middlewares/checkCookie");
 const dataLocal = require("./middlewares/validations/dataLocal");
 const saveSession = require("./middlewares/saveSession");
 const userId = require("./middlewares/validations/userId");
+const jwtKeys = require("./controllers/utils/jwtKeys");
+
+
+
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -26,13 +30,14 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(session({ secret: "Secreto", resave: false, saveUninitialized: false })); //CRPG
-//app.use(checkCookie);
 app.use(saveSession);
 app.use(checkSession);
-
 app.use(dataLocal);
-
 app.use(userId);
+
+app.set("jwtKey",jwtKeys.key) // Configuración de la clave secreta para JWT
+app.use(express.urlencoded({extended:false}));
+
 
 // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");

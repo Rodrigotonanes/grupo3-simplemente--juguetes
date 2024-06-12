@@ -1,6 +1,10 @@
 // const { loadData } = require("../../dataBase");
 const db = require("../../dataBase/models");
 const { compareSync } = require("bcryptjs");
+
+const jwt = require("jsonwebtoken");
+const jwtKeys = require("../utils/jwtKeys");
+
 module.exports = (req, res) => {
   //Login
 
@@ -32,6 +36,8 @@ module.exports = (req, res) => {
         redireccion: "/autenticacion/login",
       });
     }
+
+
     //Ingresar como usuario con session y recordar la session
     const {
       id,
@@ -70,10 +76,20 @@ module.exports = (req, res) => {
       userPicture,
       role,
     };
-    //if (recuerdame) {
+
+    const token = jwt.sign({ userName: userFind.userName }, jwtKeys.key,{ expiresIn: "1h" });
+    console.log(`token ${token}`)
+
+    if (recuerdame) {
+      res.cookie("userLogin", token, { maxAge: 3600000 });
       //remenber es una variable creada para representar un valor boleano.
-      res.cookie("userLogin", req.session.userLogin, { maxAge: 6000*30 });
-    //}
+      //res.cookie("userLogin", req.session.userLogin, { maxAge: 3600000 });
+     // res.cookie("jwtToken", token, { maxAge: 3600000 }); // Expira en 1 hora
+    }
+    // Generar token JWT
+
     res.redirect("/");
+    //res.json({ token });
+    // res.redirect("/?token=" + token);
   });
 };

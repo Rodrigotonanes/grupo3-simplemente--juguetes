@@ -1,4 +1,4 @@
-const getTotalOrder = require("./getTotalOrder");
+//const getTotalOrder = require("./getTotalOrder");
 
 module.exports = {
     getOrderPending: require("./getOrderPending"),

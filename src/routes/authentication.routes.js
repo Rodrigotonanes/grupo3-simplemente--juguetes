@@ -32,7 +32,10 @@ router.get("/registro-completado", registro2);
 
 // /autenticacion/login
 router.get("/login", login);
+
 router.post("/login", loginProcess);
+
+
 router.post("/error", errorAuth);
 
 //*** EDIT ONE USER ***/
