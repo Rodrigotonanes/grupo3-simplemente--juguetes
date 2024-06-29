@@ -1,6 +1,176 @@
+/* Estilos generales del botón de hamburguesa */
+.menu-toggle-label {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1100; /* Por encima del sidebar */
+    color: var(--white);
+}
+
+.menu-toggle-label {
+    top: 1px;
+    background-color: var(--green);
+    padding: 0px 6px;
+    opacity: 100; /* Hacer el icono transparente */
+}
+
+.menu-toggle-label:hover{
+    opacity: 0; /* Hacer el icono transparente */
+}
+
+
+
+/* Ocultar el checkbox */
+.menu-toggle-checkbox {
+    display: none;
+}
+
 /* Estilos generales del sidebar */
 .main-menu {
-    background-color: var(--red); /* Fondo rojo */
+    background-color: var(--green); /* Fondo rojo */
+    width: 0; /* Inicialmente colapsado */
+    height: 100vh; /* Altura del sidebar */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0; /* Alineado al top */
+    left: 0; /* Alineado a la izquierda */
+    overflow-x: hidden; /* Ocultar contenido horizontal */
+    transition: width 0.3s; /* Transición suave al expandir */
+    white-space: nowrap; /* Evitar que el texto se ajuste */
+    z-index: 1000; /* Asegurar que esté encima del contenido */
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu {
+    width: 250px; /* Ancho del sidebar expandido */
+}
+
+.main-menu i.sboton {
+    display: block; /* Mostrar como bloque */
+    text-align: center; /* Centrar horizontalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    font-size: 24px; /* Tamaño del icono */
+}
+
+
+.pandaDashboard {
+    text-align: center;
+    margin: 20px 0;
+    opacity: 0; /* Oculto cuando colapsado */
+    transition: opacity 0.3s;
+    pointer-events: none; /* Desactivar eventos cuando colapsado */
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu .pandaDashboard {
+    opacity: 1; /* Visible cuando expandido */
+    pointer-events: auto; /* Activar eventos cuando expandido */
+}
+
+.pandaDashboard img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu ul li {
+    margin: 0;
+}
+
+.main-menu ul li a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 10px;
+    font-size: 16px;
+    transition: background-color 0.3s, padding 0.3s;
+    overflow: hidden; /* Ocultar contenido que desborda */
+    text-align: center; /* Centrar texto cuando colapsado */
+    white-space: nowrap; /* Evitar que el texto se ajuste */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu ul li a {
+    padding: 15px 20px; /* Espaciado interior cuando expandido */
+    text-align: left; /* Alinear texto a la izquierda cuando expandido */
+    justify-content: flex-start; /* Alinear contenido al inicio */
+}
+
+.main-menu ul li a:hover {
+    background-color: var(--greenblack); /* Fondo rojo oscuro al pasar el ratón */
+}
+
+.main-menu ul li a i {
+    margin-right: 0; /* Sin margen cuando colapsado */
+    font-size: 24px; /* Tamaño del icono */
+    transition: margin-right 0.3s;
+}
+
+
+.menu-toggle-checkbox:checked ~ .main-menu ul li a i {
+    display: block; /* Asegurar que el icono sea visible */
+    margin-right: 10px; /* Espaciado entre icono y texto cuando expandido */
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu ul li a i{
+    display: none;
+}
+
+
+
+.main-menu .nav-text {
+    display: none; /* Oculto cuando colapsado */
+    flex-grow: 1;
+    transition: display 0.3s;
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu .nav-text {
+    display: inline-block; /* Visible cuando expandido */
+}
+
+.main-menu .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: padding 0.3s;
+}
+
+.menu-toggle-checkbox:checked ~ .main-menu .logout {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-menu .logout a {
+    background-color: var(--greenblack);
+    display: flex;
+    justify-content: center; /* Centrar el enlace */
+    align-items: center; /* Centrar el enlace verticalmente */
+    width: 100%; /* Asegurar que el ancho del enlace sea completo */
+}
+
+.main-menu .logout a:hover {
+    background-color: var(--greenblack);
+}
+
+
+@media(min-device-width: 769px) {
+/* Estilos generales del sidebar */
+.menu-toggle-label {
+    display: none;
+}
+
+.main-menu {
+    background-color: var(--green); /* Fondo rojo */
     width: 60px; /* Ancho de la barra lateral colapsada */
     height: 100vh; /* Altura del sidebar */
     position: fixed; /* Fijo en la pantalla */
@@ -10,6 +180,13 @@
     transition: width 0.3s; /* Transición suave al expandir */
     white-space: nowrap; /* Evitar que el texto se ajuste */
     z-index: 1000; /* Asegurar que esté encima del contenido */
+}
+
+.main-menu i.sboton {
+    display: block; /* Mostrar como bloque */
+    text-align: center; /* Centrar horizontalmente */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    font-size: 24px; /* Tamaño del icono */
 }
 
 .main-menu:hover {
@@ -57,24 +234,28 @@
     overflow: hidden; /* Ocultar contenido que desborda */
     text-align: center; /* Centrar texto cuando colapsado */
     white-space: nowrap; /* Evitar que el texto se ajuste */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
 .main-menu:hover ul li a {
     padding: 15px 20px; /* Espaciado interior cuando expandido */
     text-align: left; /* Alinear texto a la izquierda cuando expandido */
+    justify-content: flex-start; /* Alinear contenido al inicio */
 }
 
 .main-menu ul li a:hover {
-    background-color: var(--redblack); /* Fondo rojo oscuro al pasar el ratón */
+    background-color: var(--greenblack); /* Fondo rojo oscuro al pasar el ratón */
 }
 
 .main-menu ul li a i {
     margin-right: 0; /* Sin margen cuando colapsado */
-    font-size: 24px;
+    font-size: 24px; /* Tamaño del icono */
     transition: margin-right 0.3s;
 }
 
-.main-menu:hover ul li a i {
+.main-menu:hover ul li a i.sboton {
+    display: none; /* Asegurar que el icono sea visible */
     margin-right: 10px; /* Espaciado entre icono y texto cuando expandido */
 }
 
@@ -103,9 +284,14 @@
 }
 
 .main-menu .logout a {
-    background-color: var(--redblack);
+    background-color: var(--greenblack);
+    display: flex;
+    justify-content: center; /* Centrar el enlace */
+    align-items: center; /* Centrar el enlace verticalmente */
+    width: 100%; /* Asegurar que el ancho del enlace sea completo */
 }
 
 .main-menu .logout a:hover {
-    background-color: var(--redblack);
+    background-color: var(--greenblack);
+}
 }

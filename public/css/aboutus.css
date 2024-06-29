@@ -15,13 +15,12 @@ main {
 }
 
 .imagen img {
-    margin-bottom: 20px;
-    max-width: 100%;
+    margin: 50px 0px;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    
 }
 
 .imagen img:hover {
@@ -34,4 +33,37 @@ main {
     text-align: justify;
     margin: 10px auto;
     padding: 10px 20px;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin: 10px auto;
+}
+
+.tarjeta .icono {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.rojo {
+    border-left: 8px solid #e74c3c; /* Rojo */
+}
+
+.verde {
+    border-left: 8px solid #2ecc71; /* Verde */
+}
+
+.celeste {
+    border-left: 8px solid #3498db; /* Celeste */
 }

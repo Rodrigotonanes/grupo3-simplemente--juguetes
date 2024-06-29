@@ -7,6 +7,11 @@ main.main-login{
     justify-content: center;
     align-items: center;
 }
+
+main.main-login div div a{
+    text-decoration: none;
+}
+
 .login-h2{
     margin: 50px 0px -13px 0px;
 }
@@ -126,6 +131,7 @@ div.check-login{align-self: start;margin-left: 11%;}
         width: 30px;
         height: 30px;
     }
+
 .text-google{font-size: 18px;
 padding-left: 15px;
 

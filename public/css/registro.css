@@ -438,7 +438,9 @@ main.mainRegistro{}
 main.mainRegistro nav.naregdes{
     margin-top: -20px;
 }
-
+main.mainRegistro nav.naregdes div a{
+    text-decoration: none;
+}
 
     main.mainRegistro div form input{
         height: 29px;
