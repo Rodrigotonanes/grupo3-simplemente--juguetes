@@ -151,30 +151,33 @@ margin-top: 10px;
 main.mainRegistro nav{transform: scale(1) translateX(0px);transition: 1s all;z-index: 1000;right: 20vw;left: 20vw;top: 58vh;position: absolute;display: flex;flex-direction: column;align-items: center;}
 
 .fondoRegis{
-    position: relative;
-    height: 153vh;
-    display: flex;
+
+    height: 115vh;
 }
 
 .fondoRegis .IMG1{
+    width: 100vw;
+    height: 100%;
+    /*
     height: 120%;
     position: absolute;
     left: -250px;
     top: -40px;
-    transform: scale(1);
+    transform: scale(1);*/
     }
+    /*
 .fondoRegis .IMG2{
     height: 100%;
     position: absolute;
     left: -60vh;
     transform: scale(1.1);
     }
+    */
 .fondoRegis .span1{
-    position: absolute;
+
     width: 100%;
     height: 100%;
-    align-self: start;
-    overflow: hidden;
+  
 }
  /*
 .fondoRegis .span2{
@@ -435,8 +438,9 @@ main.mainRegistro{}
     main.mainRegistro{
         
 }
+
 main.mainRegistro nav.naregdes{
-    margin-top: -20px;
+    margin-top: -160px;
 }
 main.mainRegistro nav.naregdes div a{
     text-decoration: none;
@@ -461,7 +465,7 @@ main.mainRegistro nav.naregdes div a{
     font-size: 33px;
     padding: 1% 0 5% 0;
     width: 185px;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     margin-top: 40px;
 }
     main.mainRegistro div form button{
@@ -511,8 +515,8 @@ main.mainRegistro button.botonSiguienteRegis{
        text-align: center;
     }
     main.mainRegistro div form img{
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
         align-self: center;
 }
     main.mainRegistro div form{
