@@ -50,7 +50,7 @@ main.main-login div div a{
 }
 
 .containerLogin button{
-    padding: 3px 5px;
+    padding: 2px 5px;
     background-color: var(--red);
     color: var(--blanco);
     border-radius: 0px 5px 5px 0px;
