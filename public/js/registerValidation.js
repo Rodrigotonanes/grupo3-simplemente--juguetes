@@ -109,6 +109,20 @@ password.addEventListener('blur',function(e){
         break;
     }
 })
+
+//BOTON OJO VER TEXTO
+window.addEventListener("load", () => {
+    const inputPass2 = document.querySelector("#password");
+    const btnEye = document.querySelector("#btn-eye");
+    const iconEye = document.querySelector("#icon-eye");
+    btnEye.addEventListener("click", () =>{
+        inputPass2.type = "text";
+        iconEye.classList.remove("fa-eye")
+        iconEye.classList.add("fa-eye-slash")
+    })
+}) 
+
+
 // validacion CONFIRPASSWORD
 
 confirmpassword.addEventListener('blur',function(e){
