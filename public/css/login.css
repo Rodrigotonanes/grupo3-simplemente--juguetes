@@ -35,13 +35,43 @@ main.main-login div div a{
     margin-bottom: 6px;
     display: block;
 }
-.login-contrasenia input{
+.login-contrasenia div.containerLogin input{
     border: 1px solid;
     background: var(--gris);
-    width: 100%;
+    width: 300px;
     height: 30px;
-    border-radius: 5px;
+    border-radius: 5px 0px 0px 5px;
 }
+
+/*//////////////////////////////////////////*/
+.containerLogin {
+    display: flex;
+    align-items: center;
+}
+
+.containerLogin button{
+    padding: 3px 5px;
+    background-color: var(--red);
+    color: var(--blanco);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px black solid;
+}
+
+.eye-button {
+    cursor: pointer;
+    padding: 0;
+    margin-left: -30px; /* Superpone el botón sobre el input */
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.eye-button i {
+    color: var(--blanco);
+    font-size: 1.2em; /* Tamaño del ícono */
+}
+/*//////////////////////////////////////////*/
+
 .login-boton{
     margin-bottom: 6px;
 }

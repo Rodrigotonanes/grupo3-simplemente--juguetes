@@ -298,8 +298,8 @@ main.mainRegistro div form{}
 
 main.mainRegistro div form button{
     height: 40px;
-    border: solid 1px;
-    background-color: var(--azul);
+    border: solid 1px black;
+    background-color: var(--red);
     font-size: 17px;
     display: block; /* Añadido */
     margin-left: auto; /* Añadido */
@@ -449,9 +449,11 @@ main.mainRegistro nav.naregdes div a{
     main.mainRegistro div form input{
         height: 29px;
     }
+
+    /*MODICA EL TAÑANO DEL INPUT DE LA CONFIRMACION DE CONTRASEÑA*/
     main.mainRegistro form .margenEspRegis{
-    margin-bottom: -170px;
-    height: 29px;
+    margin-bottom: -210px;
+    height: 39px;
 }
     main.mainRegistro .google{width: 200px !important;padding: 10px !important;}
     main.mainRegistro .google img{
@@ -512,6 +514,7 @@ main.mainRegistro button.botonSiguienteRegis{
         height: 29px;
     }
     main.mainRegistro div form label{
+       margin-top: 5px;
        text-align: center;
     }
     main.mainRegistro div form img{
@@ -598,13 +601,23 @@ main.mainRegistro div.divFormReg{
     
     
 }
+main.mainRegistro div.divFormReg div input{
+    height: 29px;
+}
+
+main.mainRegistro div.divFormReg form div input{
+    height: 29px;
+}
 
 main.mainRegistro div.divFormReg div input.password-input{
     position: relative;
-    right: 35px;
-    width: 200px;
+    border-radius: 5px 0px 0px 5px;
+    right: 47px;
+    width: 208px;
 }
 main.mainRegistro div.divFormReg div button{
+    color: var(--blanco);
+    border-radius: 0px 5px 5px 0px;
     margin-left: 205px;
     position: absolute;
 }
