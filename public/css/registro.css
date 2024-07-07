@@ -151,33 +151,30 @@ margin-top: 10px;
 main.mainRegistro nav{transform: scale(1) translateX(0px);transition: 1s all;z-index: 1000;right: 20vw;left: 20vw;top: 58vh;position: absolute;display: flex;flex-direction: column;align-items: center;}
 
 .fondoRegis{
-
-    height: 115vh;
+    position: relative;
+    height: 153vh;
+    display: flex;
 }
 
 .fondoRegis .IMG1{
-    width: 100vw;
-    height: 100%;
-    /*
     height: 120%;
     position: absolute;
     left: -250px;
     top: -40px;
-    transform: scale(1);*/
+    transform: scale(1);
     }
-    /*
 .fondoRegis .IMG2{
     height: 100%;
     position: absolute;
     left: -60vh;
     transform: scale(1.1);
     }
-    */
 .fondoRegis .span1{
-
+    position: absolute;
     width: 100%;
     height: 100%;
-  
+    align-self: start;
+    overflow: hidden;
 }
  /*
 .fondoRegis .span2{
@@ -298,8 +295,8 @@ main.mainRegistro div form{}
 
 main.mainRegistro div form button{
     height: 40px;
-    border: solid 1px black;
-    background-color: var(--red);
+    border: solid 1px;
+    background-color: var(--azul);
     font-size: 17px;
     display: block; /* Añadido */
     margin-left: auto; /* Añadido */
@@ -438,22 +435,17 @@ main.mainRegistro{}
     main.mainRegistro{
         
 }
-
 main.mainRegistro nav.naregdes{
-    margin-top: -160px;
+    margin-top: -20px;
 }
-main.mainRegistro nav.naregdes div a{
-    text-decoration: none;
-}
+
 
     main.mainRegistro div form input{
         height: 29px;
     }
-
-    /*MODICA EL TAÑANO DEL INPUT DE LA CONFIRMACION DE CONTRASEÑA*/
     main.mainRegistro form .margenEspRegis{
-    margin-bottom: -210px;
-    height: 39px;
+    margin-bottom: -170px;
+    height: 29px;
 }
     main.mainRegistro .google{width: 200px !important;padding: 10px !important;}
     main.mainRegistro .google img{
@@ -467,7 +459,6 @@ main.mainRegistro nav.naregdes div a{
     font-size: 33px;
     padding: 1% 0 5% 0;
     width: 185px;
-    /*margin-left: 50px;*/
     margin-top: 40px;
 }
     main.mainRegistro div form button{
@@ -514,12 +505,11 @@ main.mainRegistro button.botonSiguienteRegis{
         height: 29px;
     }
     main.mainRegistro div form label{
-       margin-top: 5px;
        text-align: center;
     }
     main.mainRegistro div form img{
-        width: 65px;
-        height: 65px;
+        width: 60px;
+        height: 60px;
         align-self: center;
 }
     main.mainRegistro div form{
@@ -601,23 +591,13 @@ main.mainRegistro div.divFormReg{
     
     
 }
-main.mainRegistro div.divFormReg div input{
-    height: 29px;
-}
-
-main.mainRegistro div.divFormReg form div input{
-    height: 29px;
-}
 
 main.mainRegistro div.divFormReg div input.password-input{
     position: relative;
-    border-radius: 5px 0px 0px 5px;
-    right: 47px;
-    width: 208px;
+    right: 35px;
+    width: 200px;
 }
 main.mainRegistro div.divFormReg div button{
-    color: var(--blanco);
-    border-radius: 0px 5px 5px 0px;
     margin-left: 205px;
     position: absolute;
 }

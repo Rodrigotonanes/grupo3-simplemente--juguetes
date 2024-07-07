@@ -34,6 +34,10 @@ body {
     margin-bottom: 0.5rem; /* Espacio entre el label y la imagen */
 }
 
+main.profile-container div div form div div img{
+    border-radius: 100%;
+}
+
 button.btn.btn-change-custom{
     background-color: var(--green)
 }

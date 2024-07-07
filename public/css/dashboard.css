@@ -11,7 +11,7 @@
 
 .menu-toggle-label {
     top: 1px;
-    background-color: var(--green);
+    background-color: var(--blue);
     padding: 0px 6px;
     opacity: 100; /* Hacer el icono transparente */
 }
@@ -29,7 +29,7 @@
 
 /* Estilos generales del sidebar */
 .main-menu {
-    background-color: var(--green); /* Fondo rojo */
+    background-color: var(--blue); /* Fondo rojo */
     width: 0; /* Inicialmente colapsado */
     height: 100vh; /* Altura del sidebar */
     position: fixed; /* Fijo en la pantalla */
@@ -105,7 +105,7 @@
 }
 
 .main-menu ul li a:hover {
-    background-color: var(--greenblack); /* Fondo rojo oscuro al pasar el ratón */
+    background-color: var(--blueblack); /* Fondo rojo oscuro al pasar el ratón */
 }
 
 .main-menu ul li a i {
@@ -151,7 +151,7 @@
 }
 
 .main-menu .logout a {
-    background-color: var(--greenblack);
+    background-color: var(--blueblack);
     display: flex;
     justify-content: center; /* Centrar el enlace */
     align-items: center; /* Centrar el enlace verticalmente */
@@ -159,7 +159,7 @@
 }
 
 .main-menu .logout a:hover {
-    background-color: var(--greenblack);
+    background-color: var(--blueblack);
 }
 
 
@@ -170,7 +170,7 @@
 }
 
 .main-menu {
-    background-color: var(--green); /* Fondo rojo */
+    background-color: var(--blue); /* Fondo rojo */
     width: 60px; /* Ancho de la barra lateral colapsada */
     height: 100vh; /* Altura del sidebar */
     position: fixed; /* Fijo en la pantalla */
@@ -245,7 +245,7 @@
 }
 
 .main-menu ul li a:hover {
-    background-color: var(--greenblack); /* Fondo rojo oscuro al pasar el ratón */
+    background-color: var(--blueblack); /* Fondo rojo oscuro al pasar el ratón */
 }
 
 .main-menu ul li a i {
@@ -284,7 +284,7 @@
 }
 
 .main-menu .logout a {
-    background-color: var(--greenblack);
+    background-color: var(--blueblack);
     display: flex;
     justify-content: center; /* Centrar el enlace */
     align-items: center; /* Centrar el enlace verticalmente */
@@ -292,6 +292,6 @@
 }
 
 .main-menu .logout a:hover {
-    background-color: var(--greenblack);
+    background-color: var(--blueblack);
 }
 }

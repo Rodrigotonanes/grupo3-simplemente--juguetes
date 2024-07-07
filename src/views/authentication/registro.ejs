@@ -15,7 +15,7 @@
                 <span class="span2">
                     <img src="../images/other/fondRegis2.jpg" alt="" class="IMG2">
                 </span>
-                -->
+                -->>
             </div>
             <nav class="naregdes">
                 <div class="divFormReg" id="">
@@ -29,31 +29,27 @@
                         <div class="errorsReg emailEr"><%- locals.errors?.email?.msg %></div>
                         <input type="email" name="email" id="email" placeholder="" value="<%= locals.old?.email %>"> 
                         
-<!---
+
                         <label for="password">Contraseña</label>
                         <div class="errorsReg passwordEr" ><%- locals.errors?.password?.msg %></div>
                         <input type="password" class="password-input" name="password" id="password" placeholder="" > 
-                          -->  
-                        
+                            
+                        <!---
                         <label for="password">Contraseña</label>
                         <div class="errorsReg passwordEr" ><%- locals.errors?.password?.msg %></div>
-                         <div class="container">
+                         <div class="search-container">
                             <input type="password" class="password-input" name="password" id="password" placeholder="" > 
-                            <button type="" class="button">
+                            <button type="submit" class="search-button">
                                 <i class="fa-solid fa-eye"></i>
                             </button>
                         </div>
-                        
-                        <!--Es importante el margenEspRegis-->
+                        -->
+
                         <label for="confgPass">Confirmar contraseña</label>
                         <div class="errorsReg confirmpasswordEr"><%- locals.errors?.confirmpassword?.msg %></div>
-                         <div class="container margenEspRegis">
-                            <input type="password" class="password-input" name="password" id="password" placeholder="" > 
-                            <button type="" class="button" id="btn-eye">
-                                <i class="fa-solid fa-eye" id="icon-eye"></i>
-                            </button>
-                        </div>
-       
+                        <input type="password" name="confirmpassword" class="margenEspRegis" placeholder="" > 
+                        
+                        
                         
                         <!--menu de insercion de foto y nombre-->
                         <div class="perfilReg">
@@ -78,10 +74,7 @@
                 </div>
                 <div class="div-img-googler">
                     <img class="img-googler" src="/images/other/google-icon.png" alt="">
-                    <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F%3Fhl%3Des&ec=GAZAmgQ&hl=es&ifkv=AS5LTATZcHyNWM-qQhY4DyEseVB62NFVjQSv2idwyo6wFLz363crOi3C9A34iUETucG1MuvZU-8hOg&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S771854049%3A1719644127469333&ddm=0">
-                     
                     <p class="i-googler">Ingresa con google</p>
-               </a>
             </nav>
 
             <main class="mainRegistro-1" id="">
