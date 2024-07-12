@@ -15,15 +15,16 @@
                 <h2 class="titulo">¡Registro Exitoso!</h2>
                 <div class="registro-exitoso">
                     <div class="registro-exitoso__detalles">
-                        <img src="/images/user/<%= user.userPicture %>"  alt="Icono de Usuario" class="registro-exitoso__icono">
+                        <img src="/images/user/<%= user.userPicture %>" alt="User Picture" onerror="this.onerror=null; this.src='/images/user/default.png';"
+
+                        
+                        alt="Icono de Usuario" class="registro-exitoso__icono">
                         <p class="registro-exitoso__nombre"> <%= user.userName %> </p>
                     </div>
                 </div>
             </nav>
 
-            <script>
-               res.redirect('/autenticacion/registro-completado');
-            </script>
+        
         </main>
         
 <footer class="sub-footer">
