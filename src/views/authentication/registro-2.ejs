@@ -3,25 +3,30 @@
     <%- include("../partials/head",{title:'Registrar'}) %>
         <!--   HEADER    -->
         <%- include("../partials/header") %>
-    <body class="bodyRegistro-2">
-<main class="mainRegistro-2">
-    <div class="fondoRegis-1">
-        <span class="span1-1">
-    <img src="../images/other/fondRegis1.jpg" alt="" class="IMG1-1">
-</span>
-<span class="span2-1">
-    <img src="../images/other/fondRegis2.jpg" alt=""class="IMG2-1">
-</span>
-</div>
-<nav>
-<h2>Registro exitoso!</h2>
-<div class="RegisExi">
-    <div>
-        <i class="fa-solid fa-user"></i>
-    </div>
-</div>
-</nav>
-</main>
+        
+        <main class="main-registro">
+            <div class="imagen-fondo">
+                <img src="../images/other/fondoPrueba.png" alt="Fondo Registro" class="imagen-fondo__img">
+            </div>
+        
+
+            <nav class="navegacion">
+                <img class="tildeVerde" src="/images/authentication/registroRealizado.png" alt="">
+                <h2 class="titulo">¡Registro Exitoso!</h2>
+                <div class="registro-exitoso">
+                    <div class="registro-exitoso__detalles">
+                        <img src="/images/user/<%= user.userPicture %>" alt="User Picture" onerror="this.onerror=null; this.src='/images/user/default.png';"
+
+                        
+                        alt="Icono de Usuario" class="registro-exitoso__icono">
+                        <p class="registro-exitoso__nombre"> <%= user.userName %> </p>
+                    </div>
+                </div>
+            </nav>
+
+        
+        </main>
+        
 <footer class="sub-footer">
    <!-- Footer -->
    <%- include("../partials/footer") %>
@@ -31,6 +36,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
     </body>
+
 </html>
 
 

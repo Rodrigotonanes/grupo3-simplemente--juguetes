@@ -1,9 +1,5 @@
-.bodyRegistro-2{display: flex;margin: 0px;flex-direction: column;flex-wrap: wrap;margin: 0;}
-.mainRegistro-2 h2{
-    margin-bottom: 80px;
-}
-.mainRegistro-2 div.RegisExi{
-    box-shadow: 10px 10px 3px rgb(0 0 0 / 50%);
+.main-registro {
+    position: relative;
     display: flex;
     border-radius: 13px;
     width: 200px;
@@ -40,49 +36,63 @@ main.mainRegistro-2 nav{right: 10vw;left: 10vw;flex-wrap: wrap;top: 37vh;positio
 .fondoRegis-1 .IMG1-1{
     height: 120%;
     position: absolute;
-    left: -250px;
-    top: -40px;
-    transform: scale(1);
-    filter: blur(50px);
-    }
-.fondoRegis-1 .IMG2-1{
-    filter: blur(50px);
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    position: absolute;
-    left: -60vh;
-    transform: scale(1.1);
-    }
-.fondoRegis-1 .span1-1{position: absolute;width: 50%;height: 100%;align-self: start;overflow: hidden;}
-.fondoRegis-1 .span2-1{height: 100%;width: 50%;align-self: end;position: absolute;overflow: hidden;}
-main.mainRegistro-2{order: 2;display: flex;margin: 0px;flex-direction: column;flex-wrap: wrap;}
-@media(min-device-width: 426px) {
-    main.mainRegistro-2 nav{
-    transform: scale(0.9);
 }
-    .fondoRegis-1 .span2-1{
-        height: 100%;
-    }
-    .fondoRegis-1 .span1-1{height: 100%;}
-    .fondoRegis-1 .IMG2-1{
-        height: 100%;
-        left: -40vh;
-    }
-    .fondoRegis-1 .IMG1-1{}
-    .fondoRegis-1{}
-    
-main.mainRegistro-2{}
+
+.imagen-fondo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    filter: blur(3px);
 }
-@media(min-device-width: 769px) {
-    
-main.mainRegistro-2{}
-    main.mainRegistro-2 nav{
-    transform: scale(0.7);
+
+.navegacion {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    z-index: 1; /* Coloca el contenido del mensaje delante de la imagen de fondo */
 }
-        .fondoRegis-1 .span2-1{
+
+.tildeVerde{
+    width: 60px;
+    height: 60px;
 }
-.fondoRegis-1 .span1-1{
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
 }
-.fondoRegis-1 .IMG2-1{}
-    .fondoRegis-1 .IMG1-1{}
-    .fondoRegis-1{}
+
+.registro-exitoso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.registro-exitoso__icono {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+
+.registro-exitoso__nombre {
+    border: 1px var(--grisObs) solid;
+    margin: 20px 0px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #555;
 }

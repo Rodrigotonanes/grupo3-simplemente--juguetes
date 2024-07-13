@@ -31,7 +31,7 @@ main.principal-c{
     width: 100%;
     padding: 8px;
     font-size: 14px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grisObs);
     border-radius: 4px;
   }
   
@@ -40,7 +40,7 @@ main.principal-c{
   }
   
   button.enviarContact {
-    background-color: #4CAF50;
+    background-color: var(--red);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -48,11 +48,11 @@ main.principal-c{
     cursor: pointer;
     font-size: 14px;
   }
-  
+  /*
   button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: var(--greeen)
   }
-  
+  */
   .contact-info {
     margin-top: 20px;
     text-align: center;

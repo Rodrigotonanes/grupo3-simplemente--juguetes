@@ -436,7 +436,7 @@ main.mainRegistro{}
         
 }
 main.mainRegistro nav.naregdes{
-    margin-top: -20px;
+    margin-top: -150px;
 }
 
 
@@ -459,7 +459,6 @@ main.mainRegistro nav.naregdes{
     font-size: 33px;
     padding: 1% 0 5% 0;
     width: 185px;
-    margin-left: 50px;
     margin-top: 40px;
 }
     main.mainRegistro div form button{

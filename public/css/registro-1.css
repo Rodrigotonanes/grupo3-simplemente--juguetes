@@ -51,7 +51,7 @@ main.mainRegistro-1 .form {
     /* position: absolute; */
     width: 80%;
     gap: 8px;
-    border-radius: 7px;
+    border-radius: 10px;
     padding: 4%;
     background: var(--white);
     flex-direction: column;
@@ -92,7 +92,11 @@ main.mainRegistro-1 .form .queCallesRegis {
     margin-bottom: 10px;
 }
 
-main.mainRegistro-1 .form div button {}
+main.mainRegistro-1 .form div button {
+    background: var(--red);
+    color: var(--blanco);
+    border-radius: 5px;
+}
 
 main.mainRegistro-1 .form div button.botonVolverRegis {
     background: var(--lightgray);
@@ -120,7 +124,7 @@ main.mainRegistro-1 .form div button p {
 
 main.mainRegistro-1 .form div button p a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 main.mainRegistro-1 .form div.calleReg {}
@@ -190,6 +194,9 @@ main.mainRegistro-1 .form div.calleReg .callebloReg4 {}
 
     .mainRegistro-1 .form div {
         margin-top: 47px;
+    }
+    main.mainRegistro-1 .form input{
+        border-radius: 5px;
     }
 
     main.mainRegistro-1 .form input.elCienReg {
@@ -358,6 +365,7 @@ main.mainRegistro-1 .form div.calleReg .callebloReg4 {}
     .mainRegistro-1 form div button {}
 
     main.mainRegistro-1 .form div button.botonVolverRegis {
+        border: 1px solid black;
         font-size: 20px;
     }
 

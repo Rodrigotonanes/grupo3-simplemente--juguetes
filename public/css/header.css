@@ -236,7 +236,7 @@
 /* Cambiar color y tamaño al pasar el ratón */
 .header div.iconosHeader .welcome:hover {
     background-color: var(--green);
-    color: var(--white); 
+    color: var(--blanco); 
     transform: scale(1.4);
 }
 
@@ -397,8 +397,8 @@
 
 /* Cambiar color y tamaño al pasar el ratón */
 .header div.iconosHeader .welcome:hover {
-    background-color: var(--green);
-    color: var(--white); 
+    background-color: var(--red);
+    color: var(--blanco); 
     transform: scale(1.4);
 }
 
@@ -460,7 +460,7 @@ border-radius: 5px;
         display: flex;
         border-radius: 5px;
         margin: 0;
-        background: var(--green);
+
     }
 
     .header div.ofertasYOutlet h3.outletHeader {

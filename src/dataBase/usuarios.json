@@ -45,7 +45,7 @@
       "password": "$2a$10$VVwyAYnTHARrOm36oLg3jeBE44ZiYXUyIR0tnAvRRzd4qgQjgH2Sy",
       "province": "BA",
       "locality": "Avellaneda",
-      "postal": 12345,
+      "postal": "12345",
       "street": "Magallanes",
       "streetNumber": "12",
       "floor": "1",
