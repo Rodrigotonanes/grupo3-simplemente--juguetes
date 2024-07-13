@@ -105,7 +105,7 @@
 }
 
 .main-menu ul li a:hover {
-    background-color: var(--blueblack); /* Fondo rojo oscuro al pasar el ratón */
+    background-color: var(--darkblue); /* Fondo rojo oscuro al pasar el ratón */
 }
 
 .main-menu ul li a i {
@@ -151,7 +151,7 @@
 }
 
 .main-menu .logout a {
-    background-color: var(--blueblack);
+    background-color: var(--darkblue);
     display: flex;
     justify-content: center; /* Centrar el enlace */
     align-items: center; /* Centrar el enlace verticalmente */
@@ -159,7 +159,7 @@
 }
 
 .main-menu .logout a:hover {
-    background-color: var(--blueblack);
+    background-color: var(--darkblue);
 }
 
 
@@ -244,15 +244,30 @@
     justify-content: flex-start; /* Alinear contenido al inicio */
 }
 
+/* Para cuando el menú está colapsado */
+.main-menu ul li a span {
+    padding-left: 10px; /* Espaciado entre el icono y el texto */
+    font-size: 16px; /* Tamaño del texto */
+    transition: padding-left 0.3s;
+}
+
+/* Para cuando el menú está expandido */
+.menu-toggle-checkbox:checked ~ .main-menu ul li a span {
+    padding-left: 10px; /* Espaciado entre el icono y el texto */
+}
+
+
 .main-menu ul li a:hover {
-    background-color: var(--blueblack); /* Fondo rojo oscuro al pasar el ratón */
+    background-color: var(--darkblue); /* Fondo rojo oscuro al pasar el ratón */
 }
 
 .main-menu ul li a i {
-    margin-right: 0; /* Sin margen cuando colapsado */
     font-size: 24px; /* Tamaño del icono */
-    transition: margin-right 0.3s;
+    transition: none; /* Sin transición para el icono */
+    margin: 0; /* Sin margen para el icono */
+    text-align: center; /* Alineación centrada */
 }
+
 
 .main-menu:hover ul li a i.sboton {
     display: none; /* Asegurar que el icono sea visible */
@@ -284,7 +299,7 @@
 }
 
 .main-menu .logout a {
-    background-color: var(--blueblack);
+    background-color: var(--darkblue);
     display: flex;
     justify-content: center; /* Centrar el enlace */
     align-items: center; /* Centrar el enlace verticalmente */
@@ -292,6 +307,6 @@
 }
 
 .main-menu .logout a:hover {
-    background-color: var(--blueblack);
+    background-color: var(--darkblue);
 }
 }

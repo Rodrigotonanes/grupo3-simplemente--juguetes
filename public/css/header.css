@@ -234,8 +234,7 @@
 }
 
 /* Cambiar color y tamaño al pasar el ratón */
-.header div.iconosHeader .welcome:hover {
-    background-color: var(--green);
+.header div.iconosHeader .welcome:hover { 
     color: var(--blanco); 
     transform: scale(1.4);
 }
@@ -397,8 +396,7 @@
 
 /* Cambiar color y tamaño al pasar el ratón */
 .header div.iconosHeader .welcome:hover {
-    background-color: var(--red);
-    color: var(--blanco); 
+    color: var(--white); 
     transform: scale(1.4);
 }
 
