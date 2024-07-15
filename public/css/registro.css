@@ -430,120 +430,147 @@ main.mainRegistro{}
 }
 
 /*/////////ESCRITORIO//////////*/
+@media (min-device-width: 769px) {
+    main.mainRegistro div.fondoRegis {
+        height: 110vh;
+        width: 100%;
+        position: relative;
+    }
 
-@media(min-device-width: 769px) {
-    main.mainRegistro{
-        
-}
-main.mainRegistro nav.naregdes{
-    margin-top: -150px;
-}
+    main.mainRegistro div.fondoRegis .IMG1 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 
+    main.mainRegistro nav.naregdes{     
+        margin-top: -150px;
+    }
 
-    main.mainRegistro div form input{
+    main.mainRegistro div form input {
         height: 29px;
     }
-    main.mainRegistro form .margenEspRegis{
-    margin-bottom: -170px;
-    height: 29px;
-}
-    main.mainRegistro .google{width: 200px !important;padding: 10px !important;}
-    main.mainRegistro .google img{
-    width: 24px;
-}
-    main.mainRegistro .google h2{}
-    main.mainRegistro .google h2 a{}
-    main.mainRegistro div h2 a{}
 
-    main.mainRegistro div h2{
-    font-size: 33px;
-    padding: 1% 0 5% 0;
-    width: 185px;
-    margin-top: 40px;
-}
-    main.mainRegistro div form button{
-    align-self: unset;
-    width: 170px;
-}
-main.mainRegistro .perfilReg{
-    
-}
-    main.mainRegistro .perfilReg div input{}
-    main.mainRegistro .perfilReg div{
-    /* padding: 7px 10px; */
-    padding-top: 0px;
-}
-    main.mainRegistro .perfilReg div.fotodePerfil{
-    border: solid 6px var(--white);
-    width: 150px;
-    height: 150px;
-    }
-
-    main.mainRegistro .perfilReg i{
-    font-size: 60px;
-}
-    main.mainRegistro .perfilReg{
-    top: 1px;
-    position: relative;
-    left: 130%;
-    width: auto;
-}
-
-main.mainRegistro button.botonSiguienteRegis{
-    font-size: 1.2rem;
-    background-color: var(--red);
-    height: 40px;
-    width: 200px;
-    border-radius: 5px;
-}
-
-.accessLogin a{
-   text-decoration: none;
-}
-
-    main.mainRegistro div form input{
+    main.mainRegistro form .margenEspRegis {
+        margin-bottom: -200px;
         height: 29px;
     }
-    main.mainRegistro div form label{
-       text-align: center;
+
+    main.mainRegistro .google {
+        width: 200px !important;
+        padding: 10px !important;
     }
-    main.mainRegistro div form img{
+
+    main.mainRegistro .google img {
+        width: 24px;
+    }
+
+    main.mainRegistro .google h2 {}
+
+    main.mainRegistro .google h2 a {}
+
+    main.mainRegistro div h2 a {}
+
+    main.mainRegistro div h2 {
+        font-size: 33px;
+        padding: 1% 0 5% 0;
+        width: 185px;
+        margin-top: 40px;
+    }
+
+    main.mainRegistro div form button {
+        align-self: unset;
+        width: 170px;
+    }
+
+    main.mainRegistro .perfilReg {}
+
+    main.mainRegistro .perfilReg div input {}
+
+    main.mainRegistro .perfilReg div {
+        padding-top: 0px;
+    }
+
+    main.mainRegistro .perfilReg div.fotodePerfil {
+        border: solid 6px var(--white);
+        width: 150px;
+        height: 150px;
+    }
+
+    main.mainRegistro .perfilReg i {
+        font-size: 60px;
+    }
+
+    main.mainRegistro .perfilReg {
+        top: 1px;
+        position: relative;
+        left: 130%;
+        width: auto;
+    }
+
+    main.mainRegistro button.botonSiguienteRegis {
+        font-size: 1.2rem;
+        background-color: var(--red);
+        height: 40px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .accessLogin a {
+        text-decoration: none;
+    }
+
+    main.mainRegistro div form input {
+        height: 29px;
+    }
+
+    main.mainRegistro div form label {
+        text-align: center;
+    }
+
+    main.mainRegistro div form img {
         width: 60px;
         height: 60px;
         align-self: center;
-}
-    main.mainRegistro div form{
-    width: 310px;
-}
-main.mainRegistro div form button a{
-    font-size: 1.2rem;
-}
+    }
 
-.div-img-googler{
-    justify-content: space-around;
-    margin-top: 50px;
-    height: 65px;
-    width: 240px;
-    background: var(--white);
-    display: flex;
-    border: solid 1px;
-    border-radius: 45px;
-    margin-bottom: 30px;
-    box-shadow: 3px 8px 5px 3px rgba(0, 0, 0, 0.2);
-    align-items: center;
-}
+    main.mainRegistro div form {
+        width: 310px;
+    }
 
-.div-img-googler p{
-    margin: 0px 0px 0px -40px;
-    font-size: 21px;
-}
-    .img-googler{
+    main.mainRegistro div form button a {
+        font-size: 1.2rem;
+    }
+
+    .div-img-googler {
+        justify-content: space-around;
+        margin-top: 50px;
+        height: 65px;
+        width: 240px;
+        background: var(--white);
+        display: flex;
+        border: solid 1px;
+        border-radius: 45px;
+        margin-bottom: 30px;
+        box-shadow: 3px 8px 5px 3px rgba(0, 0, 0, 0.2);
+        align-items: center;
+    }
+
+    .div-img-googler p {
+        margin: 0px 0px 0px -40px;
+        font-size: 21px;
+    }
+
+    .img-googler {
         margin-left: -22px;
         width: 40px;
         height: 40px;
     }
 
-    .pandaFormularioReg{
+    .pandaFormularioReg {
         padding: 5px;
         box-shadow: 10px 10px 5px 9px rgba(0, 0, 0, 0.2);
         top: -30px;
@@ -552,68 +579,62 @@ main.mainRegistro div form button a{
         border: 1px solid black;
         border-radius: 50px;
         background-color: #E2001A;
-}
+    }
 
-main.pandaFormularioReg h2{
-    color: red ;
-    font-size: 20px
-}
+    main.pandaFormularioReg h2 {
+        color: red;
+        font-size: 20px;
+    }
 
-    main.mainRegistro div{
-}
-    .fondoRegis .span2{
-}
-    .fondoRegis .span1{
-}
-    .fondoRegis .IMG2{
-    
-}
-    .fondoRegis .IMG1{
-        
-}
-    .fondoRegis{
-}
-    main.mainRegistro nav{
-    top: 52vh;
-}
+    main.mainRegistro div {}
 
+    .fondoRegis .span2 {}
 
-main.mainRegistro nav div{
-    width: 310px;
-    display: flex;
-    align-items: center;
-}
-main.mainRegistro div.divFormReg{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-}
+    .fondoRegis .span1 {}
 
-main.mainRegistro div.divFormReg div input.password-input{
-    position: relative;
-    right: 35px;
-    width: 200px;
-}
-main.mainRegistro div.divFormReg div button{
-    margin-left: 205px;
-    position: absolute;
-}
+    .fondoRegis .IMG2 {}
 
-main.mainRegistro div.divFormReg form.formReg{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centrar en el eje vertical */
-    display: flex; /* Añadir esta línea */
-}
+    .fondoRegis .IMG1 {}
 
-main.mainRegistro div form button{ 
-    width: 29px;
-    height: 29px;
-}
+    main.mainRegistro nav {
+        top: 52vh;
+    }
 
+    main.mainRegistro nav div {
+        width: 310px;
+        display: flex;
+        align-items: center;
+    }
 
-    .bodyRegistro{}
+    main.mainRegistro div.divFormReg {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main.mainRegistro div.divFormReg div input.password-input {
+        position: relative;
+        right: 35px;
+        width: 200px;
+    }
+
+    main.mainRegistro div.divFormReg div button {
+        margin-left: 205px;
+        position: absolute;
+    }
+
+    main.mainRegistro div.divFormReg form.formReg {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    main.mainRegistro div form button {
+        width: 29px;
+        height: 29px;
+    }
+
+    .bodyRegistro {}
 }
